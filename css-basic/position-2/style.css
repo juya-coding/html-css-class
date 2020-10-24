@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.02em; /* 글자 간격 지정 */
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 500; /* 글자 굵기 지정 */
+    color: #1f2d3d;
+    line-height: 1.4545454545; /* 줄간격(높이) 지정 */
+}
+
+strong {
+    font-size: 22px;
+    color: #2860e1;
+    line-height: 1.0909090909;
+}
+
+strong span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #525d69;
+    line-height: 1.5;
+}
+
+button {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-size: contain; 
+  /* 요소 배경 이미지의 크기 설정 - 이미지가 찌그러지지 않는 한도 내에서 제일 크게 설정 */
+  background-repeat: no-repeat; 
+  /* 배경 이미지 반복 방법 지정 - 이미지 반복하지 않음 */
+  background-position: center center; 
+  /* 배경 이미지 초기 위치 설정 */
+  background-color: transparent;
+}
+
+#prev {
+    background-image: url(./assets/icon-backward.svg);
+}
+  
+#next {
+    background-image: url(./assets/icon-forward.svg);
+    position: absolute;
+    top: 108.45px;
+    right: 0px;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+
+.card {
+    width: 400px;
+}
+
+.card-carousel {
+    position: relative;
+}
+
+.card-carousel img {
+    display: block;
+    width: 100%; /* 부모 박스 크기 100% 채우는 사이즈 */
+    height: auto;
+}
+
+.card-content {
+    padding: 12px 16px;
+}
+
+.card-content span {
+    font-size: 16px;
+    color: #7D858F;
+}
+
+.card-content h1 {
+    padding-bottom: 2px;
+}
+
+.card-content strong {
+    display: block;
+    margin-top: 8px;
+    text-align: right; /* 오른쪽 정렬 */
+}
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%; /* 기준점 위쪽에서 50% */
+    transform: translateY(-50%);  /* 자기 자신을 기준으로 움직인다. */ 
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
